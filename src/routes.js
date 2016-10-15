@@ -5,13 +5,18 @@ import HomePage from './components/home/HomePage';
 import AboutPage from './components/about/AboutPage';
 import CoursesPage from './components/course/CoursesPage';
 import ManageCoursePage from './components/course/ManageCoursePage';
+import AuthorsPage from './components/author/AuthorsPage';
+//import ManageAuthorPage from './components/author/ManageAuthorPage';
 
 export default(
-  <Route path="/" component={App}>
-    <IndexRoute component={HomePage} />
-    <Route path="courses" component={CoursesPage} />
-    <Route path="course" component={ManageCoursePage} />
-    <Route path="course/:id" component={ManageCoursePage} />
-    <Route path="about" component={AboutPage} />
-  </Route>
+    <Route path="/" component={App}>
+        <IndexRoute component={HomePage}/>
+        <Route path="courses" component={CoursesPage}/>
+        <Route path="course" component={ManageCoursePage}/>
+        <Route path="course/:id" component={ManageCoursePage}/>
+        <Route path="authors" component={AuthorsPage}/>
+        //  <Route path="author" component={ManageCoursePage}/>
+        //  <Route path="author/:id" component={ManageCoursePage}/>
+        <Route path="about" component={AboutPage}/>
+    </Route>
 );

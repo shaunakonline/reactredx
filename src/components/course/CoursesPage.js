@@ -21,14 +21,15 @@ redirectToAddCoursePage(){
   browserHistory.push('/course');
 }
   render(){
+     //debugger;
     const {courses} = this.props;
     return(
       <div>
         <h1> Courses page </h1>
-<input type ="submit"
-      value="Add Course"
-      className="btn btn-primary"
-      onClick={this.redirectToAddCoursePage}      />
+        <input type ="submit"
+              value="Add Course"
+              className="btn btn-primary"
+              onClick={this.redirectToAddCoursePage}      />
         <CourseList courses={courses} />
 
       </div>
