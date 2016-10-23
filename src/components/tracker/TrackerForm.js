@@ -6,11 +6,11 @@ import {browserHistory} from 'react-router';
 
 class TrackerForm extends React.Component{
   constructor(props,context){
-    super(props,context)
+    super(props,context);
     this.state={
-      tracker:Object.assign({},{"applicationName":'',"developerName":'',"testerName":''}),
+      tracker: Object.assign({},{"applicationName":'',"developerName":'',"testerName":''}),
       errors:{}
-    }
+    };
     this.onFormInputNext = this.onFormInputNext.bind(this);
     this.updateTrackerState = this.updateTrackerState.bind(this);
   }
@@ -25,11 +25,11 @@ updateTrackerState (e){
     let formIsValid=true;
     let errors={};
     if(this.state.tracker.applicationName.length<5){
-      errors.applicationName="Application name length has to be greater than 5"
+      errors.applicationName="Application name length has to be greater than 5";
       formIsValid=false;
     }
-this.setState({errors:errors});
-return formIsValid;
+    this.setState({errors:errors});
+    return formIsValid;
   }
   onFormInputNext(e){
     e.preventDefault();
