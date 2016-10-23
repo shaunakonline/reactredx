@@ -6,6 +6,7 @@ import AboutPage from './components/about/AboutPage';
 import CoursesPage from './components/course/CoursesPage';
 import ManageCoursePage from './components/course/ManageCoursePage';
 import AuthorsPage from './components/author/AuthorsPage';
+import TrackerPage from './components/tracker/TrackerPage';
 //import ManageAuthorPage from './components/author/ManageAuthorPage';
 
 import SignupPage from './components/signup/SignupPage';
@@ -21,5 +22,6 @@ export default(
         {/* //  <Route path="author/:id" component={ManageCoursePage}/> */}
         <Route path="about" component={AboutPage}/>
         <Route path="signup" component={SignupPage}/>
+        <Route path="tracker" component={TrackerPage}/>
     </Route>
 );
