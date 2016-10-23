@@ -4,7 +4,8 @@ import SelectInput from '../common/SelectInput';
 
 
 const TrackerFormInput = ({tracker, onNext, onChange, errors}) => {
-let temp = { 'value': "hello"};
+
+
      return(
 <div>
   <p> This is Tracker Form Input </p>
@@ -32,7 +33,11 @@ let temp = { 'value': "hello"};
          error={errors.testerName}
          />
 
-         <button className="btn btn-primary" text="Next" onClick={onNext}/>
+        
+           <input type ="submit"
+                 value="Next >"
+                 className="btn btn-primary"
+                 onClick={onNext}      />
 
 </div>
 

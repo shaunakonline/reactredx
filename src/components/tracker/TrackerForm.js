@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import TrackerFormInput from './TrackerFormInput';
-
+import {browserHistory} from 'react-router';
 
 class TrackerForm extends React.Component{
   constructor(props,context){
@@ -37,6 +37,9 @@ return formIsValid;
     if(!this.trackerInputFormIsValid()){
       return;
     }
+
+      browserHistory.push('/course');
+
   }
    render(){
      return(
