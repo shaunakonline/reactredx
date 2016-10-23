@@ -1,6 +1,7 @@
 import React from 'react';
 import TextInput from '../common/TextInput';
 import SelectInput from '../common/SelectInput';
+import PasswordInput from '../common/PasswordInput';
 
  const SignupForm = ({user, onSave, onChange, saving, errors}) => {
 
@@ -35,19 +36,19 @@ import SelectInput from '../common/SelectInput';
             onChange={onChange}
             error={errors.phone}/>
 
-          <TextInput
+          <PasswordInput
               name="password"
               label="Password"
               value={user.password}
               onChange={onChange}
               error={errors.password}/>
 
-          <TextInput
-                  name="password"
+          <PasswordInput
+                  name="passwordconfirm"
                   label="Password Confirm"
-                  value={user.password}
+                  value={user.passwordconfirm}
                   onChange={onChange}
-                  error={errors.password}/>
+                  error={errors.passwordconfirm}/>
 
       {/* <SelectInput
         name="authorId"
