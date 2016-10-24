@@ -7,8 +7,7 @@ import CoursesPage from './components/course/CoursesPage';
 import ManageCoursePage from './components/course/ManageCoursePage';
 import AuthorsPage from './components/author/AuthorsPage';
 import TrackerPage from './components/tracker/TrackerPage';
-//import ManageAuthorPage from './components/author/ManageAuthorPage';
-
+import LoginPage from './components/login/LoginPage';
 import SignupPage from './components/signup/SignupPage';
 
 export default(
@@ -18,10 +17,9 @@ export default(
         <Route path="course" component={ManageCoursePage}/>
         <Route path="course/:id" component={ManageCoursePage}/>
         <Route path="authors" component={AuthorsPage}/>
-        {/* //  <Route path="author" component={ManageCoursePage}/> */}
-        {/* //  <Route path="author/:id" component={ManageCoursePage}/> */}
         <Route path="about" component={AboutPage}/>
         <Route path="signup" component={SignupPage}/>
+        <Route path="login" component={LoginPage}/>
         <Route path="tracker" component={TrackerPage}/>
     </Route>
 );
