@@ -4,6 +4,9 @@ import SelectInput from '../common/SelectInput';
 import PasswordInput from '../common/PasswordInput';
 
  const SignupForm = ({user, onSave, onChange, saving, errors}) => {
+//
+//why not class Component ??
+//
 
   return (
     <form>

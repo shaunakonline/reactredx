@@ -20,10 +20,12 @@ class SignupPage extends React.Component{
      this.signupUser = this.signupUser.bind(this);
 }
    updateSignupState(event) {
+    // return this.setState({ [e.target.name]: e.target.value });
     const field = event.target.name;
     let user = this.state.user;
     user[field] = event.target.value;
     return this.setState({user: user});
+
   }
 
     signupFormIsValid() {
@@ -64,15 +66,18 @@ class SignupPage extends React.Component{
 
 
   render(){
-    return(<div>
-      <h1>signup page</h1>
-      <SignupForm
-         onChange={this.updateSignupState}
-         onSave={this.signupUser}
-         user={this.state.user}
-         errors={this.state.errors}
-         saving={this.state.saving}
-        />
+    return(
+      <div className="row">
+            <div className="col-md-4 col-md-offset-4">
+
+            <SignupForm
+               onChange={this.updateSignupState}
+               onSave={this.signupUser}
+               user={this.state.user}
+               errors={this.state.errors}
+               saving={this.state.saving}
+              />
+            </div>
       </div>
 
     );
@@ -91,8 +96,8 @@ class SignupPage extends React.Component{
   };
 
   function mapStateToProps(state, ownProps) {
-
-    let user = {id: '', firstname: '', lastname: '', username: '', password: '', phone: ''   };
+//console.log('inside mapStateToProps');
+    let user = {id: '', firstname: '', lastname: '', username: '',  phone: '', password: '', passwordconfirm: '' };
 
     return {
       user: user
